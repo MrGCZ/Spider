@@ -66,5 +66,3 @@ def hhf_sum(zhmx):
 zhmx=zd_catch()
 hhf_sum=hhf_sum(zhmx)
 print u'今日汇划费为：'+str(hhf_sum)
-
-

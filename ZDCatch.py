@@ -28,16 +28,10 @@ def zd_catch():
     login_button3 = driver.find_element_by_xpath("html/body/div[1]/div[4]/div/div[2]/span")  # 划款业务查询
     login_button3.click()
     time.sleep(10)
-
-    htm_const = driver.page_source
-    soup = BeautifulSoup(htm_const, 'html.parser', from_encoding='utf-8')
-
     driver.switch_to.frame(driver.find_element_by_xpath("//iframe[contains(@src,'faHkzlcx')]"))
-
     chakanzhiling = driver.find_element_by_xpath(".//*[@id='btn_view']/div/span")
     zhilingleibie = driver.find_elements_by_css_selector("[aria-describedby=gridTable_hklbname]")
     huakuanzhiling = []
-
     for zllb in zhilingleibie:
         zllb.click()
         chakanzhiling.click()
@@ -56,8 +50,3 @@ def zd_catch():
     return huakuanzhiling
 
 
-'''
-htm_const1=driver.page_source
-soup=BeautifulSoup(htm_const1,'html.parser',from_encoding='utf-8')
-print soup
-'''

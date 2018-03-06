@@ -1,19 +1,14 @@
-1520317002465	geckodriver	INFO	Listening on 127.0.0.1:57176
-1520317004470	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.dZ2Xw4qH3pV3
-1520317004474	geckodriver::marionette	INFO	Starting browser C:\Program Files\Mozilla Firefox\firefox.exe
-1520317004480	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57183
-1520317005514	Marionette	INFO	Listening on port 57183
-1520317007457	Marionette	INFO	startBrowser 21d9ca92-9b9a-4332-9c5b-44f166aca749
-JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
-ex/js/layout.js?v=Hsfa2.6-TG20151130-A4, line 783: TypeError: window.event is undefined
-t.js:250:15
-implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:575:15
-
-*************************
-*************************
-A coding exception was thrown and uncaught in a Task.
-
-Full message: TypeError: can't access dead object
+1520325201562	geckodriver	INFO	Listening on 127.0.0.1:61984
+1520325203566	mozprofile::profile	INFO	Using profile path C:\Users\ADMINI~1\AppData\Local\Temp\rust_mozprofile.vgDFdo9s340w
+1520325203570	geckodriver::marionette	INFO	Starting browser C:\Program Files\Mozilla Firefox\firefox.exe
+1520325203575	geckodriver::marionette	INFO	Connecting to Marionette on localhost:61990
+1520325204845	Marionette	INFO	Listening on port 61990
+1520325206932	Marionette	INFO	startBrowser 1d8336c0-592f-4ba2-a1aa-0a351898da0f
+JavaScript error: https://custodian.chinaclear.cn/uijsp/index/js/layout.js?v=Hsfa2.6-TG20151130-A4, line 783: TypeError: window.event is undefined
+[Child 4648] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-beta-w64-0000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 4648] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-beta-w64-0000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+ 346
+rror: can't access dead object
 Full stack: find_@chrome://marionette/content/element.js:279:7
 element.find/</findElements<@chrome://marionette/content/element.js:250:15
 implicitlyWaitFor/</elementSearch@chrome://marionette/content/element.js:575:15
