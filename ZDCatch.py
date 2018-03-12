@@ -5,6 +5,7 @@ from selenium.webdriver import DesiredCapabilities
 import time
 from bs4 import BeautifulSoup
 import re
+import datetime
 
 def zd_catch():
     driver = webdriver.Firefox()
@@ -32,6 +33,7 @@ def zd_catch():
     chakanzhiling = driver.find_element_by_xpath(".//*[@id='btn_view']/div/span")
     zhilingleibie = driver.find_elements_by_css_selector("[aria-describedby=gridTable_hklbname]")
     huakuanzhiling = []
+    n=1
     for zllb in zhilingleibie:
         zllb.click()
         chakanzhiling.click()
@@ -39,6 +41,9 @@ def zd_catch():
         soup = BeautifulSoup(htm_const1, 'html.parser', from_encoding='utf-8')
         zhilingzhuangtai = soup.find(id="v_zllc").string  # 指令状态
         huankuanleibie = soup.find(id="v_hklb").string  # 划款类别
+        if re.search(re.compile(u'定期存款存放'),huankuanleibie):
+            driver.get_screenshot_as_file("img/xjgdc"+ datetime.datetime.now().strftime('%Y%m%d')+'_'+str(n)+".png")
+            n+=1
         shiyou = soup.find(id="v_hksy").string  # 事由
         huoqizhanghukahuhang = soup.find(id="v_skkhhqc").string  # 活期账户开户行
         jine = soup.find(id="v_je").string  # 金额
